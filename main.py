@@ -2,7 +2,7 @@ import streamlit as st
 import random
 import string
 import re
-import pyperclip  # type: ignore
+# import pyperclip  # type: ignore
 
 st.set_page_config(page_title="PASSWORD STRENGTH METER", page_icon="🔒")
 
@@ -173,12 +173,12 @@ if st.button("Generate Password"):
     st.code(generated_password)  # Display the generated password in a code block
 
     # Button to copy the password to the clipboard
-    if st.button("Copy to Clipboard"):
-        try:
-            pyperclip.copy(generated_password)  # Copy the password to the clipboard
-            st.info("Password copied to clipboard!")
-        except ImportError:
-            st.error("Please install the 'pyperclip' module to use this feature. Run: `pip install pyperclip`")
+    # if st.button("Copy to Clipboard"):
+    #     try:
+    #         pyperclip.copy(generated_password)  # Copy the password to the clipboard
+    #         st.info("Password copied to clipboard!")
+    #     except ImportError:
+    #         st.error("Please install the 'pyperclip' module to use this feature. Run: `pip install pyperclip`")
 
 # Button to regenerate a new password
 if st.button("Regenerate Password"):
